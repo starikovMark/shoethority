@@ -1,0 +1,323 @@
+@media ( min-width: 1600px )
+    .header
+        height: 100vh
+        &-content
+            padding-bottom: 0
+@media ( max-width: 1345px )
+    .container
+        max-width: 1145px
+    .navbar
+        &-logo
+            font-size: 1.5rem
+        &-menu
+            gap: 1.875rem
+            &-link
+                font-size: .875rem
+        &-button
+            font-size: .875rem
+    .articles
+        &-wrapper
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+        &-card
+            &:nth-child(4)
+                display: none
+    .categories
+        &-wrapper
+            grid-template-columns: repeat(2, 1fr)
+        &-card
+            &-primary
+                grid-column-start: 2
+                grid-column-end: 3
+@media (max-width: 1124px)
+    .container
+        max-width: 924px
+    .header
+        &-content
+            padding: 6.5625rem 0 10.75rem 0
+    .categories
+        &-card
+            &-primary
+                flex-direction: column
+                justify-content: start
+            &-button
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: .9375rem 1.5625rem
+                font-size: .875rem
+                max-width: 16.25rem
+                height: 2.5rem
+                flex-shrink: 0
+@media (max-width: 960px)
+    .container
+        max-width: 760px
+    .header
+        &-content
+            &-title
+                font-size: 2.8125rem
+                line-height: 3.375rem
+                margin-bottom: 1.25rem
+                max-width: 26.75rem
+            &-button
+                font-size: .875rem
+                margin-bottom: 1.6875rem
+                padding: .9375rem 1.5625rem
+            &-text
+                font-size: .875rem
+                max-width: 17.625rem
+                line-height: 1.375rem
+    .section
+        padding: 5rem 0
+        &-title
+            font-size: 2.1875rem
+            line-height: 2.625rem
+            margin-bottom: 1.875rem
+    .articles
+        display: none
+        &-card
+            &-image
+                margin-bottom: 1.25rem
+    .categories
+        padding-bottom: 0
+        &-list
+            margin-bottom: 1.25rem
+            flex-wrap: wrap
+            justify-content: start
+            gap: 1.25rem
+            display: none
+            &-link
+                font-size: .875rem
+        &-card
+            &-title
+                margin: 1.25rem 0 .625rem 0
+                font-size: 1.125rem
+            &-text
+                font-size: .75rem
+            &-primary
+                &-title
+                    font-size: 1.25rem
+                &-subtitle
+                    font-size: .75rem
+                    max-width: 10.75rem
+    .feedback
+        &-card
+            max-width: 40.5625rem
+            gap: 5.3125rem
+            margin-bottom: 2.5rem
+            &-image
+                width: 15.625rem
+                height: 15.625rem
+            &-text
+                &-subtitle
+                    font-size: 1rem
+                    line-height: 1.8rem
+                    margin-bottom: 1.25rem
+        &-button
+            padding: .9375rem 1.5625rem
+            font-size: .875rem
+            line-height: auto
+        &-subtitle
+            font-size: .875rem
+            margin-bottom: 1.875rem
+        &-wrapper
+            column-gap: 3.5625rem
+            row-gap: 1.875rem
+            &-image
+                width: 7.8125rem
+                height: 7.8125rem
+    svg
+        width: 1.375rem
+        height: 1.375rem
+    .cta
+        height: auto
+        padding-top: 5.3125rem
+        padding-bottom: 10.25rem
+        &-title
+            font-size: 2.1875rem
+            line-height: 2.625rem
+            max-width: 28.5rem
+        &-subtitle
+            font-size: 1rem
+            line-height: 1.3rem
+            margin: .9375rem 0
+        &-form
+            &-input
+                width: 29rem
+    .footer
+        &-text
+            &-logo
+                font-size: 1.5625rem
+                line-height: normal
+        &-info
+            gap: 2.1875rem
+            &-list
+                &-title
+                    font-size: 1.125rem
+                    line-height: 1.4625rem
+                &-item
+                    &:not(:last-child)
+                        margin-bottom: .5rem
+                &-link
+                    font-size: .875rem
+                    line-height: 1.4rem
+    .articles-sm
+        display: block
+    .reviews-sm
+        display: block
+    .articles
+        &-wrapper
+            display: flex
+            flex-direction: column
+            gap: 1.875rem
+        &-card
+            &-text
+                min-height: auto
+                &-title
+                    margin-bottom: .625rem
+                &-info
+                    display: flex
+                    align-items: center
+                    gap: 1.5625rem
+                    &-date
+                        margin: 0
+@media (max-width: 760px)
+    .container
+        max-width: 550px
+    .section
+        padding: 4.375rem 0
+    .categories
+        &-card
+            &-primary
+                padding: 1.4375rem 1.125rem
+                &-image
+                    height: 22.25rem
+            &-image
+                height: 22.25rem
+            &-button
+                padding: .625rem 1.25rem
+                white-space: nowrap
+    .reviews
+        &-wrapper
+            gap: 1.875rem
+            display: flex
+            flex-direction: column
+        &-card
+            &-image
+                margin-bottom: 1.25rem
+            &-title
+                font-size: 1.125rem
+                line-height: 1.1375rem
+                margin-bottom: .625rem
+            &-date
+                font-size: .75rem
+                line-height: auto
+            &-button
+                font-size: .875rem
+                line-height: auto
+    .feedback
+        padding: 3.125rem 0
+        &-card
+            max-width: 33.25rem
+            gap: 3.125rem
+            &-image
+                width: 10.75rem
+                height: 10.75rem
+            &-text
+                &-subtitle
+                    font-size: .9375rem
+                    line-height: 1.6875rem
+                    margin-bottom: 1.25rem
+        &-button
+            padding: .625rem 1.25rem
+            line-height: auto
+        &-subtitle
+            margin-bottom: 1.25rem
+        &-wrapper
+            column-gap: auto
+            row-gap: 1.25rem
+            &-image
+                width: 5.9375rem
+                height: 5.9375rem
+    .footer
+        &-wrapper
+            flex-direction: column
+            gap: 3.125rem
+        &-text
+            &-logo
+                font-size: 1.5625rem
+                line-height: normal
+        &-info
+            gap: 0
+            justify-content: space-between
+        &-copyright
+            display: block
+            margin-top: 2.5rem
+@media (max-width: 640px)
+    .container
+        max-width: 480px
+    .header
+        &-content
+            padding-top: 4.375rem
+    .categories
+        &-card
+            &-primary
+                padding: 1.4375rem 1.125rem
+                &-image
+                    height: 22.25rem
+            &-image
+                height: 22.25rem
+            &-button
+                padding: .625rem 1.25rem
+                white-space: normal
+    .feedback
+        padding: 2.5rem 0
+        &-card
+            flex-direction: column
+            gap: 1.25rem
+            &-image
+                width: 9.375rem
+                height: 9.375rem
+            &-text
+                &-subtitle
+                    text-align: justify
+        &-button
+            max-width: 11.25rem
+            margin: auto
+        &-wrapper
+            grid-template-columns: repeat(2, 1fr)
+    .footer
+        &-info
+            flex-wrap: wrap
+@media (max-width: 480px)
+    .container
+        max-width: 320px
+    .header
+        &-content
+            &-title
+                font-size: 2.125rem
+                line-height: 2.625rem
+            &-button
+                font-size: .875rem
+            &-text
+                font-size: .8125rem
+                line-height: 1.25rem
+    .section
+        padding: 2.5rem 0
+        &-title
+            font-size: 1.75rem
+            line-height: 2.1rem
+    .categories
+        &-wrapper
+            display: flex
+            flex-direction: column
+        &-card
+            &-title
+                margin-top: .625rem
+            &-primary
+                grid-column-start: 1
+                grid-column-end: 2
+    .articles-sm
+        padding-top: 11.5rem
+    .cta
+        display: none

@@ -1,0 +1,94 @@
+.categories
+    padding: 0
+    &-list
+        display: flex
+        align-items: center
+        justify-content: space-between
+        list-style: none
+        margin: 0
+        padding: 0
+        margin-bottom: 1.875rem
+        &-link
+            color: $light_grey
+            font-size: 1rem
+            font-style: normal
+            font-weight: 400
+            line-height: 1.3rem
+            text-transform: uppercase
+            text-decoration: none
+            transition: color 0.2s
+            &:hover
+                color: $orange
+    &-wrapper
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        row-gap: 3.125rem
+        column-gap: 2.5rem
+    &-card
+        max-width: 100%
+        text-decoration: none
+        color: $black
+        transition: color 0.2s
+        &-primary
+            display: flex
+            justify-content: space-between
+            grid-column-start: 2
+            grid-column-end: 4
+            position: relative
+            padding: 2.5rem
+            &-title
+                margin: 0
+                color: #FFF
+                font-size: 1.625rem
+                font-style: normal
+                font-weight: 600
+                line-height: 2.4375rem
+            &-subtitle
+                color: #FFF
+                font-size: .875rem
+                font-style: normal
+                font-weight: 400
+                line-height: 1.3125rem
+                max-width: 12.5rem
+            &-image
+                position: absolute
+                left: 0
+                right: 0
+                top: 0
+                bottom: 0
+                width: 100%
+                height: 25rem
+                object-fit: cover
+                border-radius: 4px
+                z-index: -1
+                filter: brightness(77%)
+        &:hover
+            color: $orange
+        &-button
+            height: 4.1875rem
+        &-image
+            width: 100%
+            height: 25rem
+            object-fit: cover
+            filter: brightness(77%)
+            border-radius: 4px
+        &-title
+            color: inherit
+            font-size: 1.25rem
+            font-style: normal
+            font-weight: 600
+            line-height: 2.25rem
+            margin: 1.25rem 0 .625rem 0
+        &-text
+            color: #5f5f5f
+            font-size: .875rem
+            font-style: normal
+            font-weight: 400
+            line-height: 1.3125rem
+            margin: 0
+.reviews-card-image
+    width: 100%
+    height: 14.3125rem
+    object-fit: cover
+    margin-bottom: 1.875rem
+    border-radius: 5px

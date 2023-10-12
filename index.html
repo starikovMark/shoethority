@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script defer>
+      !(function (e, n, A) {
+        function o(e, n) {
+          return typeof e === n;
+        }
+        function t() {
+          var e, n, A, t, a, i, l;
+          for (var f in r)
+            if (r.hasOwnProperty(f)) {
+              if (
+                ((e = []),
+                (n = r[f]),
+                n.name &&
+                  (e.push(n.name.toLowerCase()),
+                  n.options && n.options.aliases && n.options.aliases.length))
+              )
+                for (A = 0; A < n.options.aliases.length; A++)
+                  e.push(n.options.aliases[A].toLowerCase());
+              for (
+                t = o(n.fn, "function") ? n.fn() : n.fn, a = 0;
+                a < e.length;
+                a++
+              )
+                (i = e[a]),
+                  (l = i.split(".")),
+                  1 === l.length
+                    ? (Modernizr[l[0]] = t)
+                    : (!Modernizr[l[0]] ||
+                        Modernizr[l[0]] instanceof Boolean ||
+                        (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])),
+                      (Modernizr[l[0]][l[1]] = t)),
+                  s.push((t ? "" : "no-") + l.join("-"));
+            }
+        }
+        function a(e) {
+          var n = u.className,
+            A = Modernizr._config.classPrefix || "";
+          if ((c && (n = n.baseVal), Modernizr._config.enableJSClass)) {
+            var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)");
+            n = n.replace(o, "$1" + A + "js$2");
+          }
+          Modernizr._config.enableClasses &&
+            ((n += " " + A + e.join(" " + A)),
+            c ? (u.className.baseVal = n) : (u.className = n));
+        }
+        function i(e, n) {
+          if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]);
+          else {
+            e = e.toLowerCase();
+            var o = e.split("."),
+              t = Modernizr[o[0]];
+            if ((2 == o.length && (t = t[o[1]]), "undefined" != typeof t))
+              return Modernizr;
+            (n = "function" == typeof n ? n() : n),
+              1 == o.length
+                ? (Modernizr[o[0]] = n)
+                : (!Modernizr[o[0]] ||
+                    Modernizr[o[0]] instanceof Boolean ||
+                    (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])),
+                  (Modernizr[o[0]][o[1]] = n)),
+              a([(n && 0 != n ? "" : "no-") + o.join("-")]),
+              Modernizr._trigger(e, n);
+          }
+          return Modernizr;
+        }
+        var s = [],
+          r = [],
+          l = {
+            _version: "3.6.0",
+            _config: {
+              classPrefix: "",
+              enableClasses: !0,
+              enableJSClass: !0,
+              usePrefixes: !0,
+            },
+            _q: [],
+            on: function (e, n) {
+              var A = this;
+              setTimeout(function () {
+                n(A[e]);
+              }, 0);
+            },
+            addTest: function (e, n, A) {
+              r.push({ name: e, fn: n, options: A });
+            },
+            addAsyncTest: function (e) {
+              r.push({ name: null, fn: e });
+            },
+          },
+          Modernizr = function () {};
+        (Modernizr.prototype = l), (Modernizr = new Modernizr());
+        var f,
+          u = n.documentElement,
+          c = "svg" === u.nodeName.toLowerCase();
+        !(function () {
+          var e = {}.hasOwnProperty;
+          f =
+            o(e, "undefined") || o(e.call, "undefined")
+              ? function (e, n) {
+                  return n in e && o(e.constructor.prototype[n], "undefined");
+                }
+              : function (n, A) {
+                  return e.call(n, A);
+                };
+        })(),
+          (l._l = {}),
+          (l.on = function (e, n) {
+            this._l[e] || (this._l[e] = []),
+              this._l[e].push(n),
+              Modernizr.hasOwnProperty(e) &&
+                setTimeout(function () {
+                  Modernizr._trigger(e, Modernizr[e]);
+                }, 0);
+          }),
+          (l._trigger = function (e, n) {
+            if (this._l[e]) {
+              var A = this._l[e];
+              setTimeout(function () {
+                var e, o;
+                for (e = 0; e < A.length; e++) (o = A[e])(n);
+              }, 0),
+                delete this._l[e];
+            }
+          }),
+          Modernizr._q.push(function () {
+            l.addTest = i;
+          }),
+          Modernizr.addAsyncTest(function () {
+            function e(e, n, A) {
+              function o(n) {
+                var o = n && "load" === n.type ? 1 == t.width : !1,
+                  a = "webp" === e;
+                i(e, a && o ? new Boolean(o) : o), A && A(n);
+              }
+              var t = new Image();
+              (t.onerror = o), (t.onload = o), (t.src = n);
+            }
+            var n = [
+                {
+                  uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",
+                  name: "webp",
+                },
+                {
+                  uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",
+                  name: "webp.alpha",
+                },
+                {
+                  uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
+                  name: "webp.animation",
+                },
+                {
+                  uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",
+                  name: "webp.lossless",
+                },
+              ],
+              A = n.shift();
+            e(A.name, A.uri, function (A) {
+              if (A && "load" === A.type)
+                for (var o = 0; o < n.length; o++) e(n[o].name, n[o].uri);
+            });
+          }),
+          t(),
+          a(s),
+          delete l.addTest,
+          delete l.addAsyncTest;
+        for (var p = 0; p < Modernizr._q.length; p++) Modernizr._q[p]();
+        e.Modernizr = Modernizr;
+      })(window, document);
+    </script>
+    <script src="./js/main.js" defer></script>
+    <title>Shoethority</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="navbar-mobile">
+          <ul class="navbar-mobile-menu">
+            <li class="navbar-menu-item">
+              <a href="#" class="navbar-menu-link"
+                >Shoe blog
+                <svg width="10" height="5">
+                  <use href="./img/svg/sprites.svg#arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-menu-item">
+              <a href="#" class="navbar-menu-link">About us</a>
+            </li>
+            <li class="navbar-menu-item">
+              <a href="#" class="navbar-menu-link"
+                >Search
+                <svg width="15" height="15">
+                  <use href="./img/svg/sprites.svg#search"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-menu-item">
+              <a href="#" class="navbar-menu-link">Shoe size calculator</a>
+            </li>
+          </ul>
+          <!-- /.navbar-menu -->
+        </div>
+        <div class="navbar">
+          <a href="./" class="navbar-logo">shoethority</a>
+          <ul class="navbar-menu">
+            <li class="navbar-menu-item">
+              <a href="#" class="navbar-menu-link"
+                >Shoe blog
+                <svg width="10" height="5">
+                  <use href="./img/svg/sprites.svg#arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-menu-item">
+              <a href="#" class="navbar-menu-link">About us</a>
+            </li>
+            <li class="navbar-menu-item">
+              <a href="#" class="navbar-menu-link"
+                >Search
+                <svg width="15" height="15">
+                  <use href="./img/svg/sprites.svg#search"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-menu-item">
+              <a href="#" class="navbar-menu-link">Shoe size calculator</a>
+            </li>
+          </ul>
+          <!-- /.navbar-menu -->
+          <a href="#" class="navbar-button"
+            >subscribe
+            <svg width="25" height="25">
+              <use href="./img/svg/sprites.svg#subscribe"></use>
+            </svg>
+          </a>
+          <a href="#" class="navbar-menu-toggle">
+            <div class="navbar-menu-line"></div>
+            <div class="navbar-menu-line"></div>
+            <div class="navbar-menu-line"></div>
+          </a>
+        </div>
+        <!-- /.navbar -->
+        <div class="header-content">
+          <h1 class="header-content-title">
+            Choose Your Perfect Pair of Shoes
+          </h1>
+          <a href="#" class="navbar-button header-content-button"
+            >Get the best shoe deals first
+            <svg width="25" height="25">
+              <use href="./img/svg/sprites.svg#subscribe"></use>
+            </svg>
+          </a>
+          <p class="header-content-text">
+            We’re a team of doctors, product experts and testers. Our goal is to
+            make your shoe shopping easy and stress free.
+          </p>
+          <!-- /.header-content-text -->
+          <a href="#" class="header-content-text-button"
+            >About Us
+            <svg width="25" height="25">
+              <use href="./img/svg/sprites.svg#subscribe"></use>
+            </svg>
+          </a>
+        </div>
+        <!-- /.header-content -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <!-- /.header -->
+    <section class="section articles">
+      <div class="container">
+        <h2 class="section-title">Lates articles</h2>
+        <div class="articles-wrapper">
+          <a href="#" class="articles-card">
+            <picture>
+              <source type="image/webp" srcset="./img/articles/card-1.webp" />
+              <source type="image/jpeg" srcset="./img/articles/card-1.jpeg" />
+              <img
+                class="articles-card-image"
+                src="./img/articles/card-1.jpeg"
+                alt="7 Best Shoes for Achilles Tendonitis in 2022, According to Doctor"
+              />
+            </picture>
+            <div class="articles-card-text">
+              <h4 class="articles-card-text-title">
+                7 Best Shoes for Achilles Tendonitis in 2022, According to
+                Doctor
+              </h4>
+              <div class="articles-card-text-info">
+                <span class="articles-card-text-date">July 6, 2022</span>
+                <span class="articles-card-text-button">
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card">
+            <picture>
+              <source type="image/webp" srcset="./img/articles/card-2.webp" />
+              <source type="image/jpeg" srcset="./img/articles/card-2.jpeg" />
+              <img
+                class="articles-card-image"
+                src="./img/articles/card-2.jpeg"
+                alt="12 Best Walking Shoes for Flat Feet & Overpronation: MD’s Guide"
+              />
+            </picture>
+            <div class="articles-card-text">
+              <h4 class="articles-card-text-title">
+                12 Best Walking Shoes for Flat Feet & Overpronation: MD’s Guide
+              </h4>
+              <div class="articles-card-text-info">
+                <span class="articles-card-text-date">July 6, 2022</span>
+                <span class="articles-card-text-button">
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card">
+            <picture>
+              <source type="image/webp" srcset="./img/articles/card-3.webp" />
+              <source type="image/png" srcset="./img/articles/card-3.png" />
+              <img
+                class="articles-card-image"
+                src="./img/articles/card-3.png"
+                alt="8 Best Shoes for Morton’s Neuroma in 2022, According to Doctor"
+              />
+            </picture>
+            <div class="articles-card-text">
+              <h4 class="articles-card-text-title">
+                8 Best Shoes for Morton’s Neuroma in 2022, According to Doctor
+              </h4>
+              <div class="articles-card-text-info">
+                <span class="articles-card-text-date">July 6, 2022</span>
+                <span class="articles-card-text-button">
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card">
+            <picture>
+              <source type="image/webp" srcset="./img/articles/card-4.webp" />
+              <source type="image/png" srcset="./img/articles/card-4.png" />
+              <img
+                class="articles-card-image"
+                src="./img/articles/card-4.png"
+                alt="13 Best Shoes for Roofing in 2022, According to Roofers"
+              />
+            </picture>
+            <div class="articles-card-text">
+              <h4 class="articles-card-text-title">
+                13 Best Shoes for Roofing in 2022, According to Roofers
+              </h4>
+              <div class="articles-card-text-info">
+                <span class="articles-card-text-date">July 6, 2022</span>
+                <span class="articles-card-text-button">
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section articles -->
+    <section class="section categories">
+      <div class="container">
+        <h2 class="section-title">Review Categories</h2>
+        <ul class="categories-list">
+          <li class="categories-list-item">
+            <a href="#" class="categories-list-link">Ergonomic Shoes</a>
+          </li>
+          <li class="categories-list-item">
+            <a href="#" class="categories-list-link">Tutorials</a>
+          </li>
+          <li class="categories-list-item">
+            <a href="#" class="categories-list-link">Everyday Shoes</a>
+          </li>
+          <li class="categories-list-item">
+            <a href="#" class="categories-list-link">Sports Shoes</a>
+          </li>
+          <li class="categories-list-item">
+            <a href="#" class="categories-list-link">Work shoes</a>
+          </li>
+          <li class="categories-list-item">
+            <a href="#" class="categories-list-link">Shoe care</a>
+          </li>
+          <li class="categories-list-item">
+            <a href="#" class="categories-list-link">Foot health</a>
+          </li>
+        </ul>
+        <div class="categories-wrapper">
+          <a href="#" class="categories-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/categories/ergonomic-shoes.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./img/categories/ergonomic-shoes.jpeg"
+              />
+              <img
+                src="./img/categories/ergonomic-shoes.jpeg"
+                alt="ergonomic-shoes"
+                class="categories-card-image"
+              />
+            </picture>
+            <h3 class="categories-card-title">Ergonomic Shoes</h3>
+            <p class="categories-card-text">
+              Shoes and orthotics that support the foot, ankle and leg. Relief
+              for flat feet, knee pain, etc.
+            </p>
+          </a>
+          <a href="#" class="categories-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/categories/tutorials.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./img/categories/tutorials.jpeg"
+              />
+              <img
+                src="./img/categories/tutorials.jpeg"
+                alt="tutorials"
+                class="categories-card-image"
+              />
+            </picture>
+            <h3 class="categories-card-title">Tutorials</h3>
+            <p class="categories-card-text">
+              Guides and tips for running, crossfit and other sports. Section
+              also covers general biomechanics.
+            </p>
+          </a>
+          <a href="#" class="categories-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/categories/everyday-shoes.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./img/categories/everyday-shoes.jpeg"
+              />
+              <img
+                src="./img/categories/everyday-shoes.jpeg"
+                alt="everyday-shoes"
+                class="categories-card-image"
+              />
+            </picture>
+            <h3 class="categories-card-title">Everyday Shoes</h3>
+            <p class="categories-card-text">
+              Shoes for work, fashion and light activity. This category includes
+              walking shoes and house shoes.
+            </p>
+          </a>
+          <a href="#" class="categories-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/categories/sports-shoes.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./img/categories/sports-shoes.jpeg"
+              />
+              <img
+                src="./img/categories/sports-shoes.jpeg"
+                alt="sports-shoes"
+                class="categories-card-image"
+              />
+            </picture>
+            <h3 class="categories-card-title">Sports Shoes</h3>
+            <p class="categories-card-text">
+              Shoes for running, crossfit and other sports. Category includes
+              athletic insoles and sports products.
+            </p>
+          </a>
+          <a href="#" class="categories-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/categories/work-shoes.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./img/categories/work-shoes.jpeg"
+              />
+              <img
+                src="./img/categories/work-shoes.jpeg"
+                alt="work-shoes"
+                class="categories-card-image"
+              />
+            </picture>
+            <h3 class="categories-card-title">Work shoes</h3>
+            <p class="categories-card-text">
+              Shoes for work, fashion and light activity. This category includes
+              walking shoes and house shoes.
+            </p>
+          </a>
+          <a href="#" class="categories-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/categories/shoe-care.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./img/categories/shoe-care.jpeg"
+              />
+              <img
+                src="./img/categories/shoe-care.jpeg"
+                alt="shoe-care"
+                class="categories-card-image"
+              />
+            </picture>
+            <h3 class="categories-card-title">Shoe care</h3>
+            <p class="categories-card-text">
+              This section covers shoe glues, shoe cleaning products, and more.
+              It also includes how-to articles and shoe care tutorials.
+            </p>
+          </a>
+          <a href="#" class="categories-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/categories/foot-health.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./img/categories/foot-health.jpeg"
+              />
+              <img
+                src="./img/categories/foot-health.jpeg"
+                alt="foot-health"
+                class="categories-card-image"
+              />
+            </picture>
+            <h3 class="categories-card-title">Foot health</h3>
+            <p class="categories-card-text">
+              Articles about foot, leg and body health. Covers taping and
+              wrapping; running technique; corrective exercises.
+            </p>
+          </a>
+          <div class="categories-card-primary">
+            <img
+              src="./img/categories/bg-card.jpeg"
+              alt="bg-card"
+              class="categories-card-primary-image"
+            />
+            <div class="categories-card-primary-text">
+              <h3 class="categories-card-primary-title">
+                Find out your shoe size
+              </h3>
+              <p class="categories-card-primary-subtitle">
+                Choose the right shoe size in other brands and countries
+              </p>
+            </div>
+            <!-- /.categories-card-primary-text -->
+            <a href="#" class="navbar-button categories-card-button"
+              >shoe size calculator
+              <svg width="25" height="25">
+                <use href="./img/svg/sprites.svg#subscribe"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- /.categories-wrapper -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section categories -->
+    <section class="section articles articles-sm">
+      <div class="container">
+        <h2 class="section-title">Lates articles</h2>
+        <div class="articles-wrapper articles-sm-wrapper">
+          <a href="#" class="articles-card">
+            <picture>
+              <source type="image/webp" srcset="./img/articles/card-1.webp" />
+              <source type="image/jpeg" srcset="./img/articles/card-1.jpeg" />
+              <img
+                class="articles-card-image"
+                src="./img/articles/card-1.jpeg"
+                alt="7 Best Shoes for Achilles Tendonitis in 2022, According to Doctor"
+              />
+            </picture>
+            <div class="articles-card-text">
+              <h4 class="articles-card-text-title">
+                7 Best Shoes for Achilles Tendonitis in 2022, According to
+                Doctor
+              </h4>
+              <div class="articles-card-text-info">
+                <span class="articles-card-text-date">July 6, 2022</span>
+                <span class="articles-card-text-button">
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card">
+            <picture>
+              <source type="image/webp" srcset="./img/articles/card-2.webp" />
+              <source type="image/jpeg" srcset="./img/articles/card-2.jpeg" />
+              <img
+                class="articles-card-image"
+                src="./img/articles/card-2.jpeg"
+                alt="12 Best Walking Shoes for Flat Feet & Overpronation: MD’s Guide"
+              />
+            </picture>
+            <div class="articles-card-text">
+              <h4 class="articles-card-text-title">
+                12 Best Walking Shoes for Flat Feet & Overpronation: MD’s Guide
+              </h4>
+              <div class="articles-card-text-info">
+                <span class="articles-card-text-date">July 6, 2022</span>
+                <span class="articles-card-text-button">
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card">
+            <picture>
+              <source type="image/webp" srcset="./img/articles/card-3.webp" />
+              <source type="image/png" srcset="./img/articles/card-3.png" />
+              <img
+                class="articles-card-image"
+                src="./img/articles/card-3.png"
+                alt="8 Best Shoes for Morton’s Neuroma in 2022, According to Doctor"
+              />
+            </picture>
+            <div class="articles-card-text">
+              <h4 class="articles-card-text-title">
+                8 Best Shoes for Morton’s Neuroma in 2022, According to Doctor
+              </h4>
+              <div class="articles-card-text-info">
+                <span class="articles-card-text-date">July 6, 2022</span>
+                <span class="articles-card-text-button">
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card">
+            <picture>
+              <source type="image/webp" srcset="./img/articles/card-4.webp" />
+              <source type="image/png" srcset="./img/articles/card-4.png" />
+              <img
+                class="articles-card-image"
+                src="./img/articles/card-4.png"
+                alt="13 Best Shoes for Roofing in 2022, According to Roofers"
+              />
+            </picture>
+            <div class="articles-card-text">
+              <h4 class="articles-card-text-title">
+                13 Best Shoes for Roofing in 2022, According to Roofers
+              </h4>
+              <div class="articles-card-text-info">
+                <span class="articles-card-text-date">July 6, 2022</span>
+                <span class="articles-card-text-button">
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section articles -->
+    <section class="section articles reviews">
+      <div class="container">
+        <h2 class="section-title">Lates reviews</h2>
+        <div class="articles-wrapper reviews-wrapper">
+          <a href="#" class="articles-card reviews-card">
+            <picture>
+              <source type="image/webp" srcset="./img/reviews/reebok.webp" />
+              <source type="image/png" srcset="./img/reviews/reebok.png" />
+              <img
+                src="./img/reviews/reebok.png"
+                alt="Reebok Pump Review 2022
+              – Shoethority"
+                class="reviews-card-image"
+              />
+            </picture>
+            <div class="articles-card-text reviews-card-text">
+              <h4 class="articles-card-text-title reviews-card-text-title">
+                Reebok Pump Review 2022 – Shoethority
+              </h4>
+              <div class="articles-card-text-info reviews-card-text-info">
+                <span class="articles-card-text-date reviews-card-text-date"
+                  >July 6, 2022</span
+                >
+                <span
+                  class="articles-card-text-button reviews-card-text-button"
+                >
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card reviews-card">
+            <picture>
+              <source type="image/webp" srcset="./img/reviews/nike.webp" />
+              <source type="image/png" srcset="./img/reviews/nike.png" />
+              <img
+                src="./img/reviews/nike.png"
+                alt="Nike Air Max Tavas Review 2022 – Shoethority"
+                class="reviews-card-image"
+              />
+            </picture>
+            <div class="articles-card-text reviews-card-text">
+              <h4 class="articles-card-text-title reviews-card-text-title">
+                Nike Air Max Tavas Review 2022 – Shoethority
+              </h4>
+              <div class="articles-card-text-info reviews-card-text-info">
+                <span class="articles-card-text-date reviews-card-text-date"
+                  >July 6, 2022</span
+                >
+                <span
+                  class="articles-card-text-button reviews-card-text-button"
+                >
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card reviews-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/reviews/hoka-boots.webp"
+              />
+              <source type="image/png" srcset="./img/reviews/hoka-boots.png" />
+              <img
+                src="./img/reviews/hoka-boots.png"
+                alt="Hoka Kaha Hiking Boots Review 2022 – Shoethority"
+                class="reviews-card-image"
+              />
+            </picture>
+            <div class="articles-card-text reviews-card-text">
+              <h4 class="articles-card-text-title reviews-card-text-title">
+                Hoka Kaha Hiking Boots Review 2022 – Shoethority
+              </h4>
+              <div class="articles-card-text-info reviews-card-text-info">
+                <span class="articles-card-text-date reviews-card-text-date"
+                  >July 6, 2022</span
+                >
+                <span
+                  class="articles-card-text-button reviews-card-text-button"
+                >
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card reviews-card">
+            <picture>
+              <source type="image/webp" srcset="./img/reviews/hoka.webp" />
+              <source type="image/png" srcset="./img/reviews/hoka.png" />
+              <img
+                src="./img/reviews/hoka.png"
+                alt="Hoka Arahi 4 Review 2022 – Shoethority"
+                class="reviews-card-image"
+              />
+            </picture>
+            <div class="articles-card-text reviews-card-text">
+              <h4 class="articles-card-text-title reviews-card-text-title">
+                Hoka Arahi 4 Review 2022 – Shoethority
+              </h4>
+              <div class="articles-card-text-info reviews-card-text-info">
+                <span class="articles-card-text-date reviews-card-text-date"
+                  >July 6, 2022</span
+                >
+                <span
+                  class="articles-card-text-button reviews-card-text-button"
+                >
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card reviews-card-->
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section articles -->
+    <section class="section feedback">
+      <div class="container">
+        <h2 class="section-title feedback-title">About us</h2>
+        <div class="feedback-card">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="./img/feedback/feedback-card-1.webp"
+            />
+            <source
+              type="image/png"
+              srcset="./img/feedback/feedback-card-1.png"
+            />
+            <img
+              src="./img/feedback/feedback-card-1.png"
+              alt="feedback-card-1"
+              class="feedback-card-image"
+            />
+          </picture>
+          <div class="feedback-card-text">
+            <p class="feedback-card-text-subtitle">
+              Hi, I’m George P.H. the founder and editor of Shoethority.com.
+              After a series of injuries, I understood the importance of
+              footwear and foot care. Now I cover foot health and shoes with a
+              team of doctors, writers and athletes!
+            </p>
+            <a href="#" class="navbar-button feedback-button"
+              >Our story
+              <svg width="25" height="25">
+                <use href="./img/svg/sprites.svg#subscribe"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- /.feedback-card -->
+        <h3 class="feedback-subtitle">our team</h3>
+        <div class="feedback-wrapper">
+          <div class="feedback-wrapper-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/feedback/feedback-card-2.webp"
+              />
+              <source
+                type="image/png"
+                srcset="./img/feedback/feedback-card-2.png"
+              />
+              <img
+                src="./img/feedback/feedback-card-2.png"
+                alt="feedback-card-2"
+                class="feedback-wrapper-image"
+              />
+            </picture>
+            <h5 class="feedback-wrapper-title">Tim Ashdown</h5>
+          </div>
+          <div class="feedback-wrapper-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/feedback/feedback-card-3.webp"
+              />
+              <source
+                type="image/png"
+                srcset="./img/feedback/feedback-card-3.png"
+              />
+              <img
+                src="./img/feedback/feedback-card-3.png"
+                alt="feedback-card-3"
+                class="feedback-wrapper-image"
+              />
+            </picture>
+            <h5 class="feedback-wrapper-title">Dr. Katherine Enes</h5>
+          </div>
+          <div class="feedback-wrapper-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/feedback/feedback-card-4.webp"
+              />
+              <source
+                type="image/png"
+                srcset="./img/feedback/feedback-card-4.png"
+              />
+              <img
+                src="./img/feedback/feedback-card-4.png"
+                alt="feedback-card-4"
+                class="feedback-wrapper-image"
+              />
+            </picture>
+            <h5 class="feedback-wrapper-title">Dr. Ayesha Rehman</h5>
+          </div>
+          <div class="feedback-wrapper-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/feedback/feedback-card-5.webp"
+              />
+              <source
+                type="image/png"
+                srcset="./img/feedback/feedback-card-5.png"
+              />
+              <img
+                src="./img/feedback/feedback-card-5.png"
+                alt="feedback-card-5"
+                class="feedback-wrapper-image"
+              />
+            </picture>
+            <h5 class="feedback-wrapper-title">Dr. Tabinda Shah</h5>
+          </div>
+          <div class="feedback-wrapper-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/feedback/feedback-card-6.webp"
+              />
+              <source
+                type="image/png"
+                srcset="./img/feedback/feedback-card-6.png"
+              />
+              <img
+                src="./img/feedback/feedback-card-6.png"
+                alt="feedback-card-6"
+                class="feedback-wrapper-image"
+              />
+            </picture>
+            <h5 class="feedback-wrapper-title">Dr. Mohammed Lubbad</h5>
+          </div>
+          <div class="feedback-wrapper-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/feedback/feedback-card-7.webp"
+              />
+              <source
+                type="image/png"
+                srcset="./img/feedback/feedback-card-7.png"
+              />
+              <img
+                src="./img/feedback/feedback-card-7.png"
+                alt="feedback-card-7"
+                class="feedback-wrapper-image"
+              />
+            </picture>
+            <h5 class="feedback-wrapper-title">Ronan Cannon</h5>
+          </div>
+          <div class="feedback-wrapper-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/feedback/feedback-card-8.webp"
+              />
+              <source
+                type="image/png"
+                srcset="./img/feedback/feedback-card-8.png"
+              />
+              <img
+                src="./img/feedback/feedback-card-8.png"
+                alt="feedback-card-8"
+                class="feedback-wrapper-image"
+              />
+            </picture>
+            <h5 class="feedback-wrapper-title">Maria Bricheno</h5>
+          </div>
+          <div class="feedback-wrapper-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/feedback/feedback-card-9.webp"
+              />
+              <source
+                type="image/png"
+                srcset="./img/feedback/feedback-card-9.png"
+              />
+              <img
+                src="./img/feedback/feedback-card-9.png"
+                alt="feedback-card-9"
+                class="feedback-wrapper-image"
+              />
+            </picture>
+            <h5 class="feedback-wrapper-title">Dr. Karim Maghraby</h5>
+          </div>
+        </div>
+        <!-- /.feedback-wrapper -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section feedback -->
+    <section class="section reviews reviews-sm">
+      <div class="container">
+        <h2 class="section-title">Lates reviews</h2>
+        <div class="articles-wrapper reviews-wrapper">
+          <a href="#" class="articles-card reviews-card">
+            <picture>
+              <source type="image/webp" srcset="./img/reviews/reebok.webp" />
+              <source type="image/png" srcset="./img/reviews/reebok.png" />
+              <img
+                src="./img/reviews/reebok.png"
+                alt="Reebok Pump Review 2022
+              – Shoethority"
+                class="reviews-card-image"
+              />
+            </picture>
+            <div class="articles-card-text reviews-card-text">
+              <h4 class="articles-card-text-title reviews-card-text-title">
+                Reebok Pump Review 2022 – Shoethority
+              </h4>
+              <div class="articles-card-text-info reviews-card-text-info">
+                <span class="articles-card-text-date reviews-card-text-date"
+                  >July 6, 2022</span
+                >
+                <span
+                  class="articles-card-text-button reviews-card-text-button"
+                >
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card reviews-card">
+            <picture>
+              <source type="image/webp" srcset="./img/reviews/nike.webp" />
+              <source type="image/png" srcset="./img/reviews/nike.png" />
+              <img
+                src="./img/reviews/nike.png"
+                alt="Nike Air Max Tavas Review 2022 – Shoethority"
+                class="reviews-card-image"
+              />
+            </picture>
+            <div class="articles-card-text reviews-card-text">
+              <h4 class="articles-card-text-title reviews-card-text-title">
+                Nike Air Max Tavas Review 2022 – Shoethority
+              </h4>
+              <div class="articles-card-text-info reviews-card-text-info">
+                <span class="articles-card-text-date reviews-card-text-date"
+                  >July 6, 2022</span
+                >
+                <span
+                  class="articles-card-text-button reviews-card-text-button"
+                >
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card reviews-card">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./img/reviews/hoka-boots.webp"
+              />
+              <source type="image/png" srcset="./img/reviews/hoka-boots.png" />
+              <img
+                src="./img/reviews/hoka-boots.png"
+                alt="Hoka Kaha Hiking Boots Review 2022 – Shoethority"
+                class="reviews-card-image"
+              />
+            </picture>
+            <div class="articles-card-text reviews-card-text">
+              <h4 class="articles-card-text-title reviews-card-text-title">
+                Hoka Kaha Hiking Boots Review 2022 – Shoethority
+              </h4>
+              <div class="articles-card-text-info reviews-card-text-info">
+                <span class="articles-card-text-date reviews-card-text-date"
+                  >July 6, 2022</span
+                >
+                <span
+                  class="articles-card-text-button reviews-card-text-button"
+                >
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card -->
+          <a href="#" class="articles-card reviews-card">
+            <picture>
+              <source type="image/webp" srcset="./img/reviews/hoka.webp" />
+              <source type="image/png" srcset="./img/reviews/hoka.png" />
+              <img
+                src="./img/reviews/hoka.png"
+                alt="Hoka Arahi 4 Review 2022 – Shoethority"
+                class="reviews-card-image"
+              />
+            </picture>
+            <div class="articles-card-text reviews-card-text">
+              <h4 class="articles-card-text-title reviews-card-text-title">
+                Hoka Arahi 4 Review 2022 – Shoethority
+              </h4>
+              <div class="articles-card-text-info reviews-card-text-info">
+                <span class="articles-card-text-date reviews-card-text-date"
+                  >July 6, 2022</span
+                >
+                <span
+                  class="articles-card-text-button reviews-card-text-button"
+                >
+                  read more
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#arrow-black"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+          <!-- /.articles-card reviews-card-->
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section articles -->
+    <section class="cta">
+      <div class="container">
+        <h2 class="section-title cta-title">
+          Step into your best life with the perfect pair of shoes.
+        </h2>
+        <h4 class="cta-subtitle">
+          Subscribe to read our latest shoe reviews
+          <svg width="25" height="25">
+            <use href="./img/svg/sprites.svg#arrow-up"></use>
+          </svg>
+        </h4>
+        <form action="#" class="cta-form">
+          <input
+            type="text"
+            class="cta-form-input"
+            placeholder="Enter your email address"
+          />
+          <button class="cta-form-button">subscribe</button>
+        </form>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section cta -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-text">
+            <a href="./" class="footer-text-logo">shoethority</a>
+            <p class="footer-text-subtitle">
+              Shoethority.com is reader-supported. As an Amazon Associate, I
+              earn from qualifying purchases made using the links on this site.
+            </p>
+          </div>
+          <div class="footer-info">
+            <ul class="footer-info-list">
+              <li class="footer-info-list-title">Home page</li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">Privacy Policy</a>
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">Disclaimer</a>
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">About Us</a>
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link"
+                  >Shoe size calculator</a
+                >
+              </li>
+            </ul>
+            <ul class="footer-info-list">
+              <li class="footer-info-list-title">shoe blog</li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">Ergonomic Shoes</a>
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">Tutorials</a>
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">Everyday Shoes</a>
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">Sports Shoes</a>
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">Work Shoes</a>
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">Shoe Care</a>
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link">Foot Health</a>
+              </li>
+            </ul>
+            <ul class="footer-info-list">
+              <li class="footer-info-list-title">Contacts</li>
+              <li class="footer-info-list-item">
+                <a href="tel:+79069426497" class="footer-info-list-link"
+                  >+7 906 942 64 97</a
+                >
+              </li>
+              <li class="footer-info-list-item">
+                <a href="#" class="footer-info-list-link"
+                  >supermark2005@mail.ru</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span class="footer-copyright">&copy 2023 Shoethority</span>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
+  </body>
+</html>

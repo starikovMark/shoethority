@@ -1,0 +1,22 @@
+<svg width="0" height="0" class="hidden">
+<symbol viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.22678 0.980206C1.91196 0.711025 1.40153 0.711025 1.0867 0.980206C0.77188 1.24939 0.77188 1.68582 1.0867 1.955L4.34807 4.74353C4.35622 4.75115 4.36461 4.75866 4.37324 4.76603C4.5308 4.90075 4.73735 4.96804 4.94385 4.96792C5.15036 4.96804 5.35691 4.90075 5.51446 4.76603C5.52309 4.75865 5.53149 4.75115 5.53964 4.74353L8.801 1.955C9.11583 1.68582 9.11583 1.24939 8.801 0.980206C8.48618 0.711025 7.97575 0.711025 7.66092 0.980206L4.94385 3.30336L2.22678 0.980206Z" fill="#E97136"/>
+</symbol>
+<symbol viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="search">
+<path d="M6.45378 11.9564C9.0311 11.9564 11.1204 9.86704 11.1204 7.28971C11.1204 4.71238 9.0311 2.62305 6.45378 2.62305C3.87645 2.62305 1.78711 4.71238 1.78711 7.28971C1.78711 9.86704 3.87645 11.9564 6.45378 11.9564Z" stroke="#E97136" stroke-width="1.40839" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.2875 13.1234L9.75 10.5859" stroke="#E97136" stroke-width="1.40839" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" id="subscribe">
+<path d="M7.03711 17.873L17.0371 7.87305" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.03711 7.87305H17.0371V17.873" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow-up">
+<path d="M7.35059 7.18164L17.3506 17.1816" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.3506 7.18164L17.3506 17.1816L7.35059 17.1816" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<symbol viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow-black">
+<path d="M7.71777 17.8174L17.7178 7.81738" stroke="#5F5F5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.71777 7.81738H17.7178V17.8174" stroke="#5F5F5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+</svg>

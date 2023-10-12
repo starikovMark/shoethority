@@ -1,0 +1,50 @@
+.articles
+    &-wrapper
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 2.3125rem
+    &-card
+        text-decoration: none
+        width: 100%
+        color: $black
+        transition: all 0.2s
+        &:hover
+            color: $orange
+        &-image
+            width: 100%
+            height: 14.3125rem
+            object-fit: cover
+            filter: brightness(77%)
+            margin-bottom: 1.875rem
+            border-radius: 2px
+        &-text
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            min-height: 9.375rem
+            &-title
+                color: inherit
+                font-size: 1.25rem
+                font-style: normal
+                font-weight: 600
+                line-height: 1.6875rem
+                margin: 0
+            &-date
+                display: block
+                color: #B1B1B1
+                font-size: .875rem
+                font-style: normal
+                font-weight: 400
+                line-height: .875rem
+                text-transform: uppercase
+            &-button
+                text-decoration: none
+                color: inherit
+                font-size: 1rem
+                font-style: normal
+                font-weight: 400
+                line-height: 1.3rem
+                text-transform: uppercase
+                display: flex
+                align-items: center
+                gap: .3125rem

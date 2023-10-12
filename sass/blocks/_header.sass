@@ -1,0 +1,58 @@
+.no-webp .header
+    background-image: url('../img/header-bg.jpeg')
+.header
+    background-image: url('../img/header-bg.webp')
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    position: relative
+    z-index: 1
+    height: 100%
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: #060D1640
+        z-index: -1
+    &-content
+        padding: 6.5625rem 0 6.5625rem 4.4375rem
+        display: flex
+        flex-direction: column
+        &-title
+            color: #FFF
+            font-size: 4.0625rem
+            font-style: normal
+            font-weight: 400
+            line-height: 4.875rem
+            max-width: 38.4375rem
+            margin: 0
+            margin-bottom: 1.875rem
+        &-button
+            padding: 1.125rem 1.5625rem
+            max-width: 20.625rem
+            margin-bottom: 7.5rem
+            justify-content: center
+            align-items: center
+        &-text
+            max-width: 19.5625rem
+            color: #FFF
+            font-size: 1rem
+            font-style: normal
+            font-weight: 400
+            line-height: 1.6rem
+            margin: 0
+            margin-bottom: 1rem
+            &-button
+                color: #fff
+                display: flex
+                align-items: center
+                gap: .625rem
+                text-transform: uppercase
+                font-size: 1rem
+                font-style: normal
+                font-weight: 400
+                line-height: 1.3rem
+                text-decoration: none
