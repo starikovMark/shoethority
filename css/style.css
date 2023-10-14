@@ -181,8 +181,12 @@ h1, h2, a, span, button, h4 {
     transform: rotate(-45deg) translate(4px, -3px);
   }
 }
-.header {
+.no-webp .header {
   background-image: url("../img/header-bg.jpeg");
+}
+
+.header {
+  background-image: url("../img/header-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -504,9 +508,13 @@ h1, h2, a, span, button, h4 {
   line-height: 1.6rem;
 }
 
+.no-webp .header {
+  background: linear-gradient(0deg, rgba(0, 23, 45, 0.3) 0%, rgba(0, 23, 45, 0.3) 100%), url("../img/cta-bg.jpeg"), lightgray 50%/cover no-repeat;
+}
+
 .cta {
   border-radius: 4px;
-  background: linear-gradient(0deg, rgba(0, 23, 45, 0.3) 0%, rgba(0, 23, 45, 0.3) 100%), url("../img/cta-bg.jpeg"), lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 23, 45, 0.3) 0%, rgba(0, 23, 45, 0.3) 100%), url("../img/cta-bg.webp"), lightgray 50%/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
