@@ -647,10 +647,11 @@ h1, h2, a, span, button, h4 {
 .blog {
   position: absolute;
   left: 0;
+  top: 6.25rem;
   right: 0;
-  top: 120px;
   background-color: #fff;
   display: none;
+  padding: 2.5rem 0;
 }
 .blog-wrapper {
   display: grid;
@@ -694,6 +695,14 @@ h1, h2, a, span, button, h4 {
 
 .blog.is-open {
   display: block;
+}
+
+.navbar-menu-shoe-blog {
+  transition: transform 0.3s;
+}
+
+.close-menu .navbar-menu-shoe-blog {
+  transform: rotate(180deg);
 }
 
 .navbar.is-open {

@@ -1,10 +1,11 @@
 .blog
     position: absolute
     left: 0
+    top: 6.25rem
     right: 0
-    top: 120px
     background-color: #fff
     display: none
+    padding: 2.5rem 0
     &-wrapper
         display: grid
         grid-template-columns: repeat(4, 1fr)
@@ -38,6 +39,10 @@
             max-width: 17.1875rem
 .blog.is-open
     display: block
+.navbar-menu-shoe-blog
+    transition: transform 0.3s
+.close-menu .navbar-menu-shoe-blog
+    transform: rotate(180deg)
 .navbar.is-open
     background-color: #fff
     color: $black
