@@ -60,20 +60,20 @@
         content: ""
         width: 100%
         height: 1px
-        background-color: $white
+        background-color: $orange
         transition: transform 0.3s
-        &:nth-child(2)
-            width: 80%
     .navbar-light .navbar-menu-line
         background-color: $white
     .navbar-menu-toggle
-        width: 5rem
-        height: 4.93rem
+        width: 2.625rem
+        height: 2.625rem
         display: flex
         align-items: end
         flex-direction: column
         justify-content: space-between
-        padding: 2rem 1.6875rem
+        padding: 1.0625rem .75rem
+        background-color: #fff
+        border-radius: 50%
     .navbar-mobile.is-open
         display: block
     .navbar-mobile
@@ -108,9 +108,7 @@
             color: #292d33
     .navbar-mobile .navbar-menu-link
         color: $black
-    .close-menu .navbar-menu-line:nth-child(2)
-        display: none
     .close-menu .navbar-menu-line:nth-child(1)
-        transform: rotate(45deg) translate(5px, 4px)
-    .close-menu .navbar-menu-line:nth-child(3)
+        transform: rotate(45deg) translate(2px, 1px)
+    .close-menu .navbar-menu-line:nth-child(2)
         transform: rotate(-45deg) translate(4px, -3px)
