@@ -82,6 +82,16 @@ h1, h2, a, span, button, h4 {
   display: flex;
   align-items: center;
   gap: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 2px;
+}
+.navbar-menu-link:hover {
+  color: #E97136;
+  transition: 0.2s;
+}
+.navbar-menu-link:focus {
+  color: #E97136;
+  background-color: #F0F0F0;
 }
 
 .navbar-button {
