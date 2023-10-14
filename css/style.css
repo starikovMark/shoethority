@@ -649,7 +649,7 @@ h1, h2, a, span, button, h4 {
   left: 0;
   top: 6.25rem;
   right: 0;
-  background-color: #fff;
+  background-color: #FCFCFC;
   display: none;
   padding: 2.5rem 0;
 }
@@ -662,6 +662,10 @@ h1, h2, a, span, button, h4 {
 }
 .blog-card {
   padding: 0.9375rem;
+  color: #202020;
+  transition: 0.2s;
+  max-width: 19.0625rem;
+  text-decoration: none;
 }
 .blog-card:nth-child(3) {
   grid-column-start: 3;
@@ -675,8 +679,13 @@ h1, h2, a, span, button, h4 {
   grid-column-start: 2;
   grid-column-end: 5;
 }
+.blog-card:hover {
+  color: #E97136;
+  border-radius: 0.3125rem;
+  box-shadow: 0.125rem 0.125rem 0.625rem 0px rgba(0, 0, 0, 0.05);
+}
 .blog-card-title {
-  color: #202020;
+  color: inherit;
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;

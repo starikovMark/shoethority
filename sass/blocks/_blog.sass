@@ -3,7 +3,7 @@
     left: 0
     top: 6.25rem
     right: 0
-    background-color: #fff
+    background-color: $white
     display: none
     padding: 2.5rem 0
     &-wrapper
@@ -13,6 +13,10 @@
         row-gap: .4375rem
     &-card
         padding: .9375rem
+        color: $black
+        transition: 0.2s
+        max-width: 19.0625rem
+        text-decoration: none
         &:nth-child(3)
             grid-column-start: 3
             grid-column-end: 5
@@ -22,8 +26,12 @@
         &:nth-child(7)
             grid-column-start: 2
             grid-column-end: 5
+        &:hover
+            color: $orange
+            border-radius: .3125rem
+            box-shadow: .125rem .125rem .625rem 0px rgba(0, 0, 0, 0.05)
         &-title
-            color: $black
+            color: inherit
             font-size: 1rem
             font-style: normal
             font-weight: 600
