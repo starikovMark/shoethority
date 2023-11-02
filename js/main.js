@@ -20,6 +20,7 @@ const closeMenu = (event) => {
   document.body.style.overflow = ""; // Страница двигается
 };
 const openBlogMenu = () => {
+  closeSearchMenu();
   // Стрелочная функция открывания меню
   blog.classList.add("is-open"); // Добавляем класс к меню
   navbar.classList.add("is-open"); // Добавляем класс к меню
@@ -34,6 +35,7 @@ const closeBlogMenu = () => {
   document.body.style.overflow = ""; // Страница двигается
 };
 const openSearchMenu = () => {
+  closeBlogMenu();
   // Стрелочная функция открывания меню
   search.classList.add("is-open"); // Добавляем класс к меню
   navbar.classList.add("is-open"); // Добавляем класс к меню
