@@ -121,6 +121,11 @@ h1, h2, a, span, button, h4 {
   .navbar-button {
     display: none;
   }
+  li .navbar-button {
+    display: flex;
+    max-width: 8.4375rem;
+    margin-top: 1.25rem;
+  }
   .header-content-button {
     display: flex;
   }
@@ -144,6 +149,7 @@ h1, h2, a, span, button, h4 {
     padding: 1.0625rem 0.75rem;
     background-color: #fff;
     border-radius: 50%;
+    box-shadow: 2px 2px 24px 0px rgba(0, 0, 0, 0.1);
   }
   .navbar-mobile.is-open {
     display: block;
@@ -157,9 +163,9 @@ h1, h2, a, span, button, h4 {
     right: 0;
     bottom: 0;
     overflow-y: auto;
-    background-color: #fff;
+    background-color: #FCFCFC;
     z-index: 2;
-    margin-top: 10rem;
+    margin-top: 6rem;
   }
   .navbar-mobile.is-open {
     display: block;
@@ -168,11 +174,12 @@ h1, h2, a, span, button, h4 {
     margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     list-style: none;
-    gap: 1.875rem;
     padding: 0;
+  }
+  .navbar-mobile-menu-item {
+    border-bottom: 2px solid #E4E4E4;
+    padding: 1.25rem 0;
   }
   .navbar-mobile-link {
     font-size: 0.875rem;
@@ -181,6 +188,7 @@ h1, h2, a, span, button, h4 {
     line-height: 160%;
     text-decoration: none;
     color: #292d33;
+    padding: 0;
   }
   .navbar-mobile .navbar-menu-link {
     color: #202020;
@@ -192,6 +200,42 @@ h1, h2, a, span, button, h4 {
     transform: rotate(-45deg) translate(4px, -3px);
   }
 }
+.search-svg {
+  width: 14px;
+  height: 14px;
+}
+.search-mobile-group {
+  gap: 0.5625rem;
+  max-width: 27.6875rem;
+}
+
+.search-form-examples .search-mobile-examples-item {
+  font-size: 10px;
+}
+
+.shoe-svg {
+  width: 8px;
+  height: 4px;
+}
+.shoe-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.625rem;
+  display: none;
+}
+.shoe-list.is-open {
+  display: block;
+}
+.shoe-list-item-link {
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  color: #959595;
+}
+
 .no-webp .header {
   background-image: url("../img/header-bg.jpeg");
 }

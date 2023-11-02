@@ -181,31 +181,100 @@
     <header class="header">
       <div class="container container-navbar-mobile">
         <div class="navbar-mobile">
-          <ul class="navbar-mobile-menu">
-            <li class="navbar-menu-item">
-              <a href="#" class="navbar-menu-link"
-                >Shoe blog
-                <svg width="10" height="5">
-                  <use href="./img/svg/sprites.svg#arrow"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="navbar-menu-item">
-              <a href="#" class="navbar-menu-link">About us</a>
-            </li>
-            <li class="navbar-menu-item">
-              <a href="#" class="navbar-menu-link"
-                >Search
-                <svg width="15" height="15">
-                  <use href="./img/svg/sprites.svg#search"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="navbar-menu-item">
-              <a href="#" class="navbar-menu-link">Shoe size calculator</a>
-            </li>
-          </ul>
-          <!-- /.navbar-menu -->
+          <div class="container">
+            <ul class="navbar-mobile-menu">
+              <li class="navbar-menu-item navbar-mobile-menu-item">
+                <a href="#" class="navbar-menu-link navbar-mobile-link shoe"
+                  >Shoe blog
+                  <svg width="10" height="5" class="shoe-svg">
+                    <use href="./img/svg/sprites.svg#arrow"></use>
+                  </svg>
+                </a>
+                <ul class="shoe-list">
+                  <li class="shoe-list-item">
+                    <a href="#" class="shoe-list-item-link">Ergonomic Shoes</a>
+                  </li>
+                  <li class="shoe-list-item">
+                    <a href="#" class="shoe-list-item-link">Tutorials</a>
+                  </li>
+                  <li class="shoe-list-item">
+                    <a href="#" class="shoe-list-item-link">Everyday Shoes</a>
+                  </li>
+                  <li class="shoe-list-item">
+                    <a href="#" class="shoe-list-item-link">Work shoes</a>
+                  </li>
+                  <li class="shoe-list-item">
+                    <a href="#" class="shoe-list-item-link">Shoe care</a>
+                  </li>
+                  <li class="shoe-list-item">
+                    <a href="#" class="shoe-list-item-link">Foot health</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="navbar-menu-item navbar-mobile-menu-item">
+                <a href="#" class="navbar-menu-link navbar-mobile-link"
+                  >About us</a
+                >
+              </li>
+              <li class="navbar-menu-item navbar-mobile-menu-item">
+                <a href="#" class="navbar-menu-link navbar-mobile-link"
+                  >Shoe size calculator</a
+                >
+              </li>
+              <li class="navbar-menu-item navbar-mobile-menu-item">
+                <a href="#" class="navbar-menu-link navbar-mobile-link"
+                  >Search
+                  <svg width="14" height="14" class="search-svg">
+                    <use href="./img/svg/sprites.svg#search"></use>
+                  </svg>
+                </a>
+                <form action="#" class="search-form search-mobile-form">
+                  <div class="search-form-group search-mobile-group">
+                    <input
+                      type="text"
+                      class="input search-form-group-input search-mobile-group-input"
+                    />
+                    <button
+                      class="button search-form-group-button search-mobile-group-button"
+                    >
+                      Search
+                    </button>
+                  </div>
+                  <ul class="search-form-examples search-mobile-examples">
+                    <li class="search-form-item search-mobile-examples-item">
+                      Examples:
+                    </li>
+                    <li class="search-form-item search-mobile-examples-item">
+                      Keywords
+                    </li>
+                    <li class="search-form-item search-mobile-examples-item">
+                      Shoes category
+                    </li>
+                    <li class="search-form-item search-mobile-examples-item">
+                      Brand
+                    </li>
+                    <li class="search-form-item search-mobile-examples-item">
+                      Activity
+                    </li>
+                  </ul>
+                </form>
+              </li>
+              <li class="navbar-menu-item navbar-mobile-menu-item">
+                <a href="#" class="navbar-menu-link navbar-mobile-link"
+                  >Contacts</a
+                >
+              </li>
+              <li>
+                <a href="#" class="navbar-button"
+                  >subscribe
+                  <svg width="25" height="25">
+                    <use href="./img/svg/sprites.svg#subscribe"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <!-- /.navbar-menu -->
+          </div>
         </div>
       </div>
       <!-- /.container -->

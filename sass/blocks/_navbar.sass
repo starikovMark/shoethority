@@ -66,6 +66,10 @@
         display: none
     .navbar-button
         display: none
+    li .navbar-button 
+        display: flex
+        max-width: 8.4375rem
+        margin-top: 1.25rem
     .header-content-button
         display: flex
     .navbar-menu-line
@@ -86,6 +90,7 @@
         padding: 1.0625rem .75rem
         background-color: #fff
         border-radius: 50%
+        box-shadow: 2px 2px 24px 0px rgba(0, 0, 0, 0.10)
     .navbar-mobile.is-open
         display: block
     .navbar-mobile
@@ -97,20 +102,20 @@
         right: 0
         bottom: 0
         overflow-y: auto
-        background-color: #fff
+        background-color: #FCFCFC
         z-index: 2
-        margin-top: 10rem
+        margin-top: 6rem
         &.is-open
             display: block
         &-menu
             margin-top: 1.5rem
             display: flex
             flex-direction: column
-            align-items: center
-            justify-content: center
             list-style: none
-            gap: 1.875rem
             padding: 0
+            &-item
+                border-bottom: 2px solid $beige
+                padding: 1.25rem 0
         &-link
             font-size: 0.875rem
             font-style: normal
@@ -118,9 +123,40 @@
             line-height: 160%
             text-decoration: none
             color: #292d33
+            padding: 0
     .navbar-mobile .navbar-menu-link
         color: $black
     .close-menu .navbar-menu-line:nth-child(1)
         transform: rotate(45deg) translate(2px, 1px)
     .close-menu .navbar-menu-line:nth-child(2)
         transform: rotate(-45deg) translate(4px, -3px)
+.search
+    &-svg
+        width: 14px
+        height: 14px
+    &-mobile
+        &-group
+            gap: .5625rem
+            max-width: 27.6875rem
+.search-form-examples .search-mobile-examples-item
+    font-size: 10px
+.shoe
+    &-svg
+        width: 8px
+        height: 4px
+    &-list
+        list-style: none
+        margin: 0
+        padding: 0
+        gap: .625rem
+        display: none
+        &.is-open
+            display: block
+        &-item
+            &-link
+                text-decoration: none
+                font-size: .8125rem
+                font-style: normal
+                font-weight: 600
+                line-height: 160%
+                color: $light_grey
